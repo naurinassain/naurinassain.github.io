@@ -4,123 +4,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naurin Assain | Dentist & Medical Writer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a4a7c;
-            --secondary: #f0f4f8;
-            --text: #333;
-            --accent: #2a69ac;
+            --primary: #0f172a;
+            --accent: #3b82f6;
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
         }
+
+        * { box-sizing: border-box; }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text);
-            background-color: var(--secondary);
+            font-family: 'Inter', -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
             margin: 0;
-            padding: 0;
+            line-height: 1.6;
         }
+
+        /* Header Styling */
         header {
-            background: white;
-            padding: 3rem 1rem;
-            text-align: center;
-            border-bottom: 4px solid var(--primary);
-        }
-        .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        h1 { color: var(--primary); margin-bottom: 0.5rem; }
-        .subtitle { font-size: 1.2rem; color: var(--accent); font-weight: bold; }
-        .section {
-            background: white;
-            padding: 2rem;
-            margin-bottom: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        h2 { border-left: 5px solid var(--primary); padding-left: 10px; color: var(--primary); }
-        .project-list { list-style: none; padding: 0; }
-        .project-item {
-            padding: 1rem 0;
-            border-bottom: 1px solid #eee;
-        }
-        .project-item:last-child { border-bottom: none; }
-        .btn {
-            display: inline-block;
             background: var(--primary);
             color: white;
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
+            padding: 4rem 2rem;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
-        .btn:hover { background: var(--accent); }
-        .contact { text-align: center; font-size: 0.9rem; margin-top: 3rem; color: #666; }
+
+        header h1 { margin: 0; font-size: 2.5rem; letter-spacing: -1px; }
+        header p { margin: 0.5rem 0; opacity: 0.9; font-weight: 300; }
+
+        .container {
+            max-width: 1000px;
+            margin: -3rem auto 3rem;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        /* Sidebar & Cards */
+        .card {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Project Items */
+        .project-item {
+            border-left: 3px solid var(--bg);
+            padding-left: 1.5rem;
+            margin-bottom: 2rem;
+            transition: 0.3s;
+        }
+
+        .project-item:hover { border-left-color: var(--accent); }
+
+        .project-item h3 { margin: 0; font-size: 1.1rem; }
+        .project-item p { color: var(--text-muted); font-size: 0.95rem; margin: 0.5rem 0; }
+
+        /* Buttons & Links */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn:hover { background: #2563eb; transform: translateY(-2px); }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+        }
+
+        .btn-outline:hover { background: var(--accent); color: white; }
+
+        /* Skills Tags */
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag {
+            background: var(--bg);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            border: 1px solid #e2e8f0;
+        }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; margin-top: 1rem; }
+            header { clip-path: none; padding: 2rem 1rem; }
+        }
     </style>
 </head>
 <body>
 
 <header>
     <h1>Naurin Assain</h1>
-    <p class="subtitle">Dentist & Medical Writer</p>
-    <p>Doha, Qatar | naurin.m.assain@gmail.com</p>
+    <p><i class="fas fa-stethoscope"></i> Dentist & Medical Content Specialist</p>
+    <p><i class="fas fa-location-dot"></i> Doha, Qatar | naurin.m.assain@gmail.com</p>
 </header>
 
 <div class="container">
-    
-    <section class="section">
-        <h2>About Me</h2>
-        <p>Results-driven Dentist with over 5 years of clinical experience and a strong passion for medical writing and professional development. Adept at designing impactful training programs and improving patient care through evidence-based practices.</p>
-    </section>
+    <aside>
+        <div class="card">
+            <h2><i class="fas fa-user"></i> Profile</h2>
+            <p style="font-size: 0.9rem;">Results-driven Dentist with over 5 years of clinical experience. Specializing in medical writing, clinical trial documentation, and evidence-based healthcare practices.</p>
+            <a href="https://www.linkedin.com/in/naurin-assain-4206021b0" class="btn" style="width: 100%; justify-content: center;" target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
 
-    <section class="section linkedin-section">
-        <h2>Professional Network</h2>
-        <p>Connect with me for collaborations in medical writing and clinical education.</p>
-        <a href="https://www.linkedin.com/in/naurin-assain-4206021b0" class="btn" target="_blank">View LinkedIn Profile</a>
-    </section>
-    
-    <section class="section">
-        <h2>Key Medical Writing Projects</h2>
-        <div class="project-list">
-            <div class="project-item">
-                <strong>Drug Monograph: Calpol 650 mg</strong>
-                <p>Detailed content including pharmacology, indications, dosage, and safety profile.</p>
-                <a href="Paracetamol-monograph.pdf" class="btn">View PDF</a>
-            </div>
-            <div class="project-item">
-                <strong>Device Monograph: Omron Thermometer</strong>
-                <p>Description of mechanism, usage, and clinical relevance.</p>
-                <a href="omron-thermometer.pdf" class="btn">View PDF</a>
-            </div>
-            <div class="project-item">
-                <strong>SEO Blog: eTMF Evolution</strong>
-                <p>SEO optimized blog content regarding the evolution of clinical trial documentation.</p>
-                <a href="etmf-2.pdf" class="btn">View PDF</a>
-            </div>
-            <div class="project-item">
-                <strong>Original Research: Salivary pH in OLP</strong>
-                <p>Structured scientific writing evaluation of salivary pH and buffering capacity in Oral Lichen Planus.</p>
-                <a href="Oral-lichen-planus-evaluation.pdf" class="btn">View PDF</a>
+        <div class="card">
+            <h2><i class="fas fa-lightbulb"></i> Skills</h2>
+            <div class="tags">
+                <span class="tag">Medical Writing</span>
+                <span class="tag">Clinical Education</span>
+                <span class="tag">Infection Control</span>
+                <span class="tag">SEO Content</span>
+                <span class="tag">Patient Safety</span>
+                <span class="tag">Microsoft Office</span>
             </div>
         </div>
-    </section>
+    </aside>
 
-    <section class="section">
-        <h2>Clinical Experience</h2>
-        <p><strong>Dental Surgeon</strong> | SB's Dental Clinic (2016-2019)</p>
-        <ul>
-            <li>Provided comprehensive dental care ensuring high standards of infection control.</li>
-            <li>Conducted staff training sessions on clinical safety protocols.</li>
-            <li>Educated patients on oral hygiene and infection prevention.</li>
-        </ul>
-    </section>
+    <main>
+        <div class="card">
+            <h2><i class="fas fa-file-medical"></i> Portfolio Projects</h2>
+            
+            <div class="project-item">
+                <h3>Drug Monograph: Calpol 650 mg</h3>
+                <p>Comprehensive analysis of pharmacology, indications, and safety profile.</p>
+                <a href="Paracetamol-monograph.pdf" class="btn btn-outline"><i class="fas fa-file-pdf"></i> View Monograph</a>
+            </div>
 
-    <div class="contact">
-        <p>&copy; 2026 Naurin Assain. Built with GitHub Pages.</p>
-    </div>
+            <div class="project-item">
+                <h3>Device Monograph: Omron Thermometer</h3>
+                <p>Technical description of mechanisms and clinical relevance for healthcare professionals.</p>
+                <a href="omron-thermometer.pdf" class="btn btn-outline"><i class="fas fa-file-pdf"></i> View Device Guide</a>
+            </div>
+
+            <div class="project-item">
+                <h3>SEO Blog: eTMF Evolution</h3>
+                <p>Insightful content regarding clinical trial documentation and digital evolution.</p>
+                <a href="etmf-2.pdf" class="btn btn-outline"><i class="fas fa-blog"></i> Read Article</a>
+            </div>
+
+            <div class="project-item">
+                <h3>Research: Salivary pH in OLP</h3>
+                <p>Structured scientific evaluation focusing on Oral Lichen Planus buffering capacity.</p>
+                <a href="Oral-lichen-planus-evaluation.pdf" class="btn btn-outline"><i class="fas fa-microscope"></i> View Research</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-briefcase"></i> Clinical Background</h2>
+            <p><strong>Dental Surgeon</strong> | SB's Dental Clinic</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: -10px;">Jan 2016 – Feb 2019</p>
+            <ul style="font-size: 0.9rem; padding-left: 1.2rem;">
+                <li>Delivered comprehensive dental care with a focus on infection control protocols. [cite: 23]</li>
+                <li>Conducted staff training on safety and sterile clinical environments. [cite: 25]</li>
+                <li>Educated patients on oral hygiene and long-term preventive measures. [cite: 27]</li>
+            </ul>
+        </div>
+    </main>
 </div>
+
+<footer style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.8rem;">
+    <p>&copy; 2026 Naurin Assain | Built with GitHub Pages</p>
+</footer>
 
 </body>
 </html>
