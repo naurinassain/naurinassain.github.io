@@ -25,13 +25,11 @@
             line-height: 1.6;
         }
 
-        /* Header Styling */
         header {
             background: var(--primary);
             color: white;
             padding: 4rem 2rem;
             text-align: center;
-            /*clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);*/
         }
 
         header h1 { margin: 0; font-size: 2.5rem; letter-spacing: -1px; }
@@ -46,7 +44,6 @@
             padding: 0 1rem;
         }
 
-        /* Sidebar & Cards */
         .card {
             background: var(--card);
             padding: 2rem;
@@ -66,7 +63,6 @@
             gap: 10px;
         }
 
-        /* Project Items */
         .project-item {
             border-left: 3px solid var(--bg);
             padding-left: 1.5rem;
@@ -75,11 +71,10 @@
         }
 
         .project-item:hover { border-left-color: var(--accent); }
-
         .project-item h3 { margin: 0; font-size: 1.1rem; }
         .project-item p { color: var(--text-muted); font-size: 0.95rem; margin: 0.5rem 0; }
+        .project-item .meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem; display: block; }
 
-        /* Buttons & Links */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -104,7 +99,6 @@
 
         .btn-outline:hover { background: var(--accent); color: white; }
 
-        /* Skills Tags */
         .tags { display: flex; flex-wrap: wrap; gap: 8px; }
         .tag {
             background: var(--bg);
@@ -117,7 +111,7 @@
 
         @media (max-width: 768px) {
             .container { grid-template-columns: 1fr; margin-top: 1rem; }
-            header { clip-path: none; padding: 2rem 1rem; }
+            header { padding: 2rem 1rem; }
         }
     </style>
 </head>
@@ -125,7 +119,7 @@
 
 <header>
     <h1>Naurin Assain</h1>
-    <p><i class="fas fa-stethoscope"></i> Dentist & Medical Content Specialist</p>
+    <p><i class="fas fa-user-md"></i> Dentist & Medical Content Specialist</p>
     <p><i class="fas fa-location-dot"></i> Doha, Qatar | naurin.m.assain@gmail.com</p>
 </header>
 
@@ -141,18 +135,45 @@
 
         <div class="card">
             <h2><i class="fas fa-lightbulb"></i> Skills</h2>
+            <h3 style="font-size: 0.9rem; margin-bottom: 0.5rem;">Clinical Dentistry</h3>
+            <div class="tags" style="margin-bottom: 1.5rem;">
+                <span class="tag">Clinical Diagnostics</span>
+                <span class="tag">Treatment Planning</span>
+                <span class="tag">Patient Counseling</span>
+                <span class="tag">Infection Control</span>
+                <span class="tag">Minor Oral Surgery</span>
+                <span class="tag">Patient Safety</span>
+            </div>
+            <h3 style="font-size: 0.9rem; margin-bottom: 0.5rem;">Medical Writing</h3>
             <div class="tags">
                 <span class="tag">Medical Writing</span>
-                <span class="tag">Clinical Education</span>
-                <span class="tag">Infection Control</span>
+                <span class="tag">Clinical Trials</span>
                 <span class="tag">SEO Content</span>
-                <span class="tag">Patient Safety</span>
+                <span class="tag">Evidence-Based Medicine</span>
                 <span class="tag">Microsoft Office</span>
             </div>
         </div>
     </aside>
 
     <main>
+        <div class="card">
+            <h2><i class="fas fa-certificate"></i> Professional Certifications</h2>
+            
+            <div class="project-item">
+                <h3>Certification in Medical Writing</h3>
+                <span class="meta">CareerInPharma Clinical Research Training Institute | Oct 2025 – Jan 2026 [cite: 24, 28]</span>
+                <p>Awarded Grade A for successfully completing the comprehensive program. [cite: 24]</p>
+                <span class="tag">Serial No: 080420261072 [cite: 25]</span>
+            </div>
+
+            <div class="project-item">
+                <h3>Medical Writer Internship</h3>
+                <span class="meta">CareerInPharma | March 2026 – April 2026 [cite: 9, 10]</span>
+                <p>Completed under the guidance of Dr. Sabana A. Nazar. Recognized for being hardworking, sincere, and diligent. [cite: 9, 11]</p>
+                <span class="tag">Serial No: 080420266100 [cite: 12]</span>
+            </div>
+        </div>
+
         <div class="card">
             <h2><i class="fas fa-file-medical"></i> Portfolio Projects</h2>
             
@@ -173,12 +194,6 @@
                 <p>Insightful content regarding clinical trial documentation and digital evolution.</p>
                 <a href="etmf-2.pdf" class="btn btn-outline"><i class="fas fa-blog"></i> Read Article</a>
             </div>
-
-            <div class="project-item">
-                <h3>Research: Salivary pH in OLP</h3>
-                <p>Structured scientific evaluation focusing on Oral Lichen Planus buffering capacity.</p>
-                <a href="Oral-lichen-planus-evaluation.pdf" class="btn btn-outline"><i class="fas fa-microscope"></i> View Research</a>
-            </div>
         </div>
 
         <div class="card">
@@ -186,9 +201,9 @@
             <p><strong>Dental Surgeon</strong> | SB's Dental Clinic</p>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: -10px;">Jan 2016 – Feb 2019</p>
             <ul style="font-size: 0.9rem; padding-left: 1.2rem;">
-                <li>Delivered comprehensive dental care with a focus on infection control protocols. [cite: 23]</li>
-                <li>Conducted staff training on safety and sterile clinical environments. [cite: 25]</li>
-                <li>Educated patients on oral hygiene and long-term preventive measures. [cite: 27]</li>
+                <li>Delivered comprehensive dental care with a focus on infection control protocols.</li>
+                <li>Conducted staff training on safety and sterile clinical environments.</li>
+                <li>Educated patients on oral hygiene and long-term preventive measures.</li>
             </ul>
         </div>
     </main>
